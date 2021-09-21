@@ -11,8 +11,8 @@
             <img class="glow" src="assets/rose.png" />
             <div class="background"><img class="wall" src="assets/10wallsfullnoreflexsorry0001.png"/></div>
             <div class="layers">
-                <img class="funghi-table" src="assets/cropped/3fungitable0001.png" />
-                <img class="heart-table" src="assets/cropped/8hearttableandtv0001.png" />
+                <img class="funghi-table" id="funghi-table" src="assets/cropped/3fungitable0001.png" />
+                <img class="heart-table" id="heart-table" src="assets/cropped/8hearttableandtv0001.png" />
                 <img class="flower-table" src="assets/cropped/7flowertable0001.png" />
                 <img class="ipad-table" src="assets/cropped/9ipadtable0001.png" />
                 <video class="tv" src="assets/Datablood-RoomVid.mp4" autoplay loop controls></video>
@@ -23,8 +23,11 @@
         </div>
         <div class="manifesto">
             <div id="container1"></div>
+            <!-- The data in our blood is calling -->
             <div id="container2"></div>
+            <!-- One foot in cyberspace -->
             <div id="container3"></div>
+            <!-- One foot in the wild -->
             <p class="manifesto4">We prioritise the primal</p>
             <p class="manifesto5">Recognise the sacred</p>
             <p class="manifesto6">Both goddess and cyborg</p>
@@ -54,9 +57,6 @@
                 camera.position.set(0, 0, 1000)
 
                 scene = new THREE.Scene()
-                // scene.background = new THREE.Color(0xe7ecf2)
-
-                // renderer = new THREE.WebGLRenderer({ antialias: true })
                 renderer = new THREE.WebGLRenderer({ alpha: true })
                 renderer.setPixelRatio(2)
                 renderer.setSize(window.innerWidth, window.innerHeight)
@@ -80,12 +80,29 @@
                     geometry.computeBoundingBox()
                     xMid = -0.514 * (geometry.boundingBox.max.x - geometry.boundingBox.min.x)
                     geometry.translate(xMid, 0, 0)
-
-                    // make shape ( N.B. edge view not visible )
-
                     text = new THREE.Mesh(geometry, matDark)
                     scene.add(text)
                     text.position.set(0, -10, 0)
+
+                    text.visible = false
+                    document.getElementById("funghi-table").addEventListener("click", function() {
+                        text.visible = !text.visible
+                    })
+
+                    var message2 = "One foot in cyberspace"
+                    var shapes2 = font.generateShapes(message2, 20)
+                    var geometry2 = new THREE.ShapeBufferGeometry(shapes2)
+                    geometry2.computeBoundingBox()
+                    xMid = -0.514 * (geometry2.boundingBox.max.x - geometry2.boundingBox.min.x)
+                    geometry2.translate(xMid, 0, 0)
+                    text2 = new THREE.Mesh(geometry2, matDark)
+                    scene.add(text2)
+                    text2.position.set(0, 10, 0)
+
+                    text2.visible = false
+                    document.getElementById("heart-table").addEventListener("click", function() {
+                        text2.visible = !text2.visible
+                    })
                 }) //end load function
 
                 // controls = new THREE.TrackballControls(camera, renderer.domElement)

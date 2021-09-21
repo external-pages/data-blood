@@ -1,12 +1,12 @@
 $(document).ready(function() {
-  $('.funghi-table').click(function() {
-    $(this).toggleClass('shadow')
-    $('#container1').toggle()
-  })
-  $('.heart-table').click(function() {
-    $(this).toggleClass('shadow')
-    $('#container2').toggle()
-  })
+  // $('.funghi-table').click(function() {
+  //   $(this).toggleClass('shadow')
+  //   $('#container1').toggle()
+  // })
+  // $('.heart-table').click(function() {
+  //   $(this).toggleClass('shadow')
+  //   $('#container2').toggle()
+  // })
   $('.tv').click(function() {
     $(this).toggleClass('shadow')
     $('.manifesto3').toggle()
