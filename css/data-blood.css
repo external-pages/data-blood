@@ -1,0 +1,186 @@
+body {
+    background: transparent;
+    margin-top: 0px;
+    margin-left: 0px;
+<<<<<<< HEAD
+    background-color: #574f4e;
+}
+
+img.glow {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 50%;
+    overflow-y: hidden;
+=======
+>>>>>>> 1af12167824cca3e9d452caaabddf04b29a6243d
+}
+
+.background img {
+    position: absolute;
+    width: 100vw;
+}
+
+.layers img {
+    position: absolute;
+}
+
+img.funghi-table,
+img.heart-table,
+<<<<<<< HEAD
+video.tv,
+=======
+img.tv,
+>>>>>>> 1af12167824cca3e9d452caaabddf04b29a6243d
+img.ipad-table,
+img.arch-right,
+img.flower-table,
+img.arch-left,
+img.plant-table {
+    position: absolute;
+}
+
+.funghi-table {
+<<<<<<< HEAD
+    right: 15vw;
+    top: 42vh;
+    width: 30%;
+}
+
+/* .heart-table {
+    left: 20vw;
+    top: 40vh;
+    width: 35%;
+} */
+
+video.tv {
+    top: 16vh;
+    left: 19vw;
+    width: 12vw;
+}
+
+/* .tv, */
+.heart-table {
+    top: 0;
+    left: 18vw;
+    width: 48%;
+}
+
+.ipad-table {
+    top: 55vh;
+    left: 30vw;
+=======
+    right: 20vw;
+    top: 40vh;
+    width: 30%;
+}
+
+.heart-table {
+    left: 20vw;
+    top: 40vh;
+    width: 35%;
+}
+
+.tv {
+    top: 0;
+    left: 18vh;
+    width: 25%;
+}
+
+.ipad-table {
+    top: 38vh;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0);
+>>>>>>> 1af12167824cca3e9d452caaabddf04b29a6243d
+    width: 7%;
+}
+
+.arch-right {
+    right: 2vw;
+<<<<<<< HEAD
+    top: 60vh;
+=======
+    top: 50vh;
+>>>>>>> 1af12167824cca3e9d452caaabddf04b29a6243d
+    width: 15%;
+}
+
+.flower-table {
+    left: 2vw;
+    top: 25vh;
+<<<<<<< HEAD
+    width: 33%;
+}
+
+.arch-left {
+    left: 5vw;
+    top: 80vh;
+    width: 28%;
+}
+
+.plant-table {
+    top: 60vh;
+    left: 40vw;
+=======
+    width: 30%;
+}
+
+.arch-left {
+    left: 12vw;
+    top: 55vh;
+    width: 30%;
+}
+
+.plant-table {
+    top: 30vw;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0);
+>>>>>>> 1af12167824cca3e9d452caaabddf04b29a6243d
+    width: 40%;
+}
+
+.layers img:hover {
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 0 0 10px 10px rgba(244, 247, 118, 0.25);
+    background-color: rgba(244, 247, 118, 0.25);
+}
+
+.shadow {
+    border-radius: 25px;
+    box-shadow: 0 0 10px 10px rgba(244, 247, 118, 0.25);
+    background-color: rgba(244, 247, 118, 0.25);
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+/* .filtered img {
+    filter: saturate(10) hue-rotate(270deg);
+
+ } */
+
+.manifesto1,
+.manifesto2,
+.manifesto3,
+.manifesto4,
+.manifesto5,
+.manifesto6,
+.manifesto7,
+.manifesto8 {
+    display: none;
+}
+
+.manifesto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    pointer-events: none;
+}
