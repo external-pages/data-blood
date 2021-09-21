@@ -124,14 +124,14 @@ p {
     pointer-events: none;
 } */
 
-.manifesto {
+/* .manifesto {
     position: absolute;
     top: 50%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
     z-index: 5;
-}
+} */
 
 #container {
     /* display: none; */
@@ -142,9 +142,9 @@ p {
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 100vw;
-    height: 100vh;
-    /* background-color: red; */
+    width: 50vw;
+    height: 80vh;
+    background-color: red;
     z-index: 3;
     pointer-events: none;
 }
