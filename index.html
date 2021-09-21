@@ -11,8 +11,8 @@
             <img class="glow" src="assets/rose.png" />
             <div class="background"><img class="wall" src="assets/10wallsfullnoreflexsorry0001.png"/></div>
             <div class="layers">
-                <img class="funghi-table" id="funghiTable" src="assets/cropped/3fungitable0001.png" />
-                <img class="heart-table" id="heartTable" src="assets/cropped/8hearttableandtv0001.png" />
+                <img class="funghi-table" id="funghi-table" src="assets/cropped/3fungitable0001.png" />
+                <img class="heart-table" id="heart-table" src="assets/cropped/8hearttableandtv0001.png" />
                 <img class="flower-table" src="assets/cropped/7flowertable0001.png" />
                 <img class="ipad-table" src="assets/cropped/9ipadtable0001.png" />
                 <video class="tv" src="assets/Datablood-RoomVid.mp4" autoplay loop controls></video>
@@ -86,23 +86,12 @@
                     scene.add(text)
                     text.position.set(0, -10, 0)
                     text.visible = false
-                    document.getElementById("funghiTable").addEventListener("click", function() {
+                    document.getElementById("funghi-table").addEventListener("click", function() {
                         text.visible = !text.visible
-                    })
-                }) //end load function
-
-                var loader2 = new THREE.FontLoader()
-                loader2.load("/assets/fonts/Accedent_Regular.json", function(font2) {
-                    var xMid, text, text2
-
-                    var color = 0x000000
-                    var matDark = new THREE.LineBasicMaterial({
-                        color: color,
-                        side: THREE.DoubleSide
                     })
 
                     var message2 = "One foot in cyberspace"
-                    var shapes2 = font2.generateShapes(message2, 20)
+                    var shapes2 = font.generateShapes(message2, 20)
                     var geometry2 = new THREE.ShapeBufferGeometry(shapes2)
                     geometry2.computeBoundingBox()
                     xMid = -0.514 * (geometry2.boundingBox.max.x - geometry2.boundingBox.min.x)
@@ -111,7 +100,7 @@
                     scene.add(text2)
                     text2.position.set(0, 10, 0)
                     text2.visible = false
-                    document.getElementById("heartTable").addEventListener("click", function() {
+                    document.getElementById("heart-table").addEventListener("click", function() {
                         text2.visible = !text2.visible
                     })
                 }) //end load function
