@@ -13,12 +13,12 @@
             <div class="layers">
                 <img class="funghi-table" id="funghi-table" src="assets/cropped/3fungitable0001.png" />
                 <img class="heart-table" id="heart-table" src="assets/cropped/8hearttableandtv0001.png" />
-                <img class="flower-table" src="assets/cropped/7flowertable0001.png" />
-                <img class="ipad-table" src="assets/cropped/9ipadtable0001.png" />
-                <video class="tv" src="assets/Datablood-RoomVid.mp4" autoplay loop controls></video>
-                <img class="arch-right" src="assets/cropped/4archright0001.png" />
-                <img class="arch-left" src="assets/cropped/6archleft0001.png" />
-                <img class="plant-table" src="assets/cropped/5planttable0001.png" />
+                <img class="flower-table" id="flower-table" src="assets/cropped/7flowertable0001.png" />
+                <img class="ipad-table" id="ipad-table" src="assets/cropped/9ipadtable0001.png" />
+                <video class="tv" id="tv" src="assets/Datablood-RoomVid.mp4" autoplay loop controls></video>
+                <img class="arch-right" id="arch-right" src="assets/cropped/4archright0001.png" />
+                <img class="arch-left" id="arch-left" src="assets/cropped/6archleft0001.png" />
+                <img class="plant-table" id="plant-table" src="assets/cropped/5planttable0001.png" />
             </div>
         </div>
         <div class="manifesto">
@@ -30,14 +30,14 @@
                 <!-- <div id="container3"></div> -->
                 <!-- One foot in the wild -->
             </div>
-            <p class="manifesto4">We prioritise the primal</p>
+            <!-- <p class="manifesto4">We prioritise the primal</p>
             <p class="manifesto5">Recognise the sacred</p>
             <p class="manifesto6">Both goddess and cyborg</p>
             <p class="manifesto7">We heal ourselves</p>
             <p class="manifesto8"
                 >Reach back to the soil, resist domination<br />
                 We won’t be sanitised nor silenced.</p
-            >
+            > -->
         </div>
 
         <script src="js/lib/jquery-3.4.1.min.js"></script>
@@ -77,31 +77,82 @@
                     })
 
                     var message = "The data in our blood is calling"
+
                     var shapes = font.generateShapes(message, 20)
                     var geometry = new THREE.ShapeBufferGeometry(shapes)
                     geometry.computeBoundingBox()
                     xMid = -0.514 * (geometry.boundingBox.max.x - geometry.boundingBox.min.x)
                     geometry.translate(xMid, 0, 0)
+
                     text = new THREE.Mesh(geometry, matDark)
                     scene.add(text)
-                    text.position.set(0, -10, 0)
+                    text.position.set(0, 100, 0)
                     text.visible = false
                     document.getElementById("funghi-table").addEventListener("click", function() {
                         text.visible = !text.visible
                     })
 
                     var message2 = "One foot in cyberspace"
-                    var shapes2 = font.generateShapes(message2, 20)
-                    var geometry2 = new THREE.ShapeBufferGeometry(shapes2)
-                    geometry2.computeBoundingBox()
-                    xMid = -0.514 * (geometry2.boundingBox.max.x - geometry2.boundingBox.min.x)
-                    geometry2.translate(xMid, 0, 0)
-                    text2 = new THREE.Mesh(geometry2, matDark)
+                    text2 = new THREE.Mesh(geometry, matDark)
                     scene.add(text2)
-                    text2.position.set(0, 10, 0)
+                    text2.position.set(0, 60, 0)
                     text2.visible = false
                     document.getElementById("heart-table").addEventListener("click", function() {
                         text2.visible = !text2.visible
+                    })
+
+                    var message3 = "We prioritise the primal"
+                    text3 = new THREE.Mesh(geometry, matDark)
+                    scene.add(text3)
+                    text3.position.set(0, 20, 0)
+                    text3.visible = false
+                    document.getElementById("flower-table").addEventListener("click", function() {
+                        text2.visible = !text2.visible
+                    })
+
+                    var message4 = "Recognise the sacred"
+                    text4 = new THREE.Mesh(geometry, matDark)
+                    scene.add(text4)
+                    text4.position.set(0, -20, 0)
+                    text4.visible = false
+                    document.getElementById("ipad-table").addEventListener("click", function() {
+                        text4.visible = !text4.visible
+                    })
+
+                    var message5 = "Both goddess and cyborg"
+                    text5 = new THREE.Mesh(geometry, matDark)
+                    scene.add(text5)
+                    text5.position.set(0, -60, 0)
+                    text5.visible = false
+                    document.getElementById("tv").addEventListener("click", function() {
+                        text5.visible = !text5.visible
+                    })
+
+                    var message6 = "We heal ourselves"
+                    text6 = new THREE.Mesh(geometry, matDark)
+                    scene.add(text6)
+                    text6.position.set(0, -100, 0)
+                    text6.visible = false
+                    document.getElementById("arch-right").addEventListener("click", function() {
+                        text6.visible = !text6.visible
+                    })
+
+                    var message7 = "Reach back to the soil, resist domination"
+                    text7 = new THREE.Mesh(geometry, matDark)
+                    scene.add(text7)
+                    text7.position.set(0, -100, 0)
+                    text7.visible = false
+                    document.getElementById("arch-left").addEventListener("click", function() {
+                        text7.visible = !text7.visible
+                    })
+
+                    var message8 = "We won’t be sanitised nor silenced."
+                    text8 = new THREE.Mesh(geometry, matDark)
+                    scene.add(text8)
+                    text8.position.set(0, -100, 0)
+                    text8.visible = false
+                    document.getElementById("plant-table").addEventListener("click", function() {
+                        text8.visible = !text8.visible
                     })
                 }) //end load function
 
