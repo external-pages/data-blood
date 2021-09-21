@@ -76,20 +76,19 @@
                         side: THREE.DoubleSide
                     })
 
-                    var message = "The data in our blood is calling"
+                    var message1 = "The data in our blood is calling"
+                    var shapes1 = font.generateShapes(message1, 20)
+                    var geometry1 = new THREE.ShapeBufferGeometry(shapes1)
+                    geometry1.computeBoundingBox()
+                    xMid = -0.514 * (geometry1.boundingBox.max.x - geometry1.boundingBox.min.x)
+                    geometry1.translate(xMid, 0, 0)
 
-                    var shapes = font.generateShapes(message, 20)
-                    var geometry = new THREE.ShapeBufferGeometry(shapes)
-                    geometry.computeBoundingBox()
-                    xMid = -0.514 * (geometry.boundingBox.max.x - geometry.boundingBox.min.x)
-                    geometry.translate(xMid, 0, 0)
-
-                    text = new THREE.Mesh(geometry, matDark)
-                    scene.add(text)
-                    text.position.set(0, 120, 0)
-                    text.visible = false
+                    text1 = new THREE.Mesh(geometry1, matDark)
+                    scene.add(text1)
+                    text1.position.set(0, 120, 0)
+                    text1.visible = false
                     document.getElementById("funghi-table").addEventListener("click", function() {
-                        text.visible = !text.visible
+                        text1.visible = !text1.visible
                     })
 
                     var message2 = "One foot in cyberspace"
