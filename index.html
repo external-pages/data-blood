@@ -93,8 +93,12 @@
                     })
 
                     var message2 = "One foot in cyberspace"
-                    var shapes = font.generateShapes(message2, 20)
-                    text2 = new THREE.Mesh(geometry, matDark)
+                    var shapes2 = font.generateShapes(message2, 20)
+                    var geometry2 = new THREE.ShapeBufferGeometry(shapes2)
+                    geometry2.computeBoundingBox()
+                    xMid = -0.514 * (geometry2.boundingBox.max.x - geometry2.boundingBox.min.x)
+                    geometry2.translate(xMid, 0, 0)
+                    text2 = new THREE.Mesh(geometry2, matDark)
                     scene.add(text2)
                     text2.position.set(0, 60, 0)
                     text2.visible = false
@@ -103,8 +107,12 @@
                     })
 
                     var message3 = "We prioritise the primal"
-                    var shapes = font.generateShapes(message3, 20)
-                    text3 = new THREE.Mesh(geometry, matDark)
+                    var shapes3 = font.generateShapes(message3, 20)
+                    var geometry3 = new THREE.ShapeBufferGeometry(shapes3)
+                    geometry3.computeBoundingBox()
+                    xMid = -0.514 * (geometry3.boundingBox.max.x - geometry3.boundingBox.min.x)
+                    geometry3.translate(xMid, 0, 0)
+                    text3 = new THREE.Mesh(geometry3, matDark)
                     scene.add(text3)
                     text3.position.set(0, 20, 0)
                     text3.visible = false
@@ -113,8 +121,12 @@
                     })
 
                     var message4 = "Recognise the sacred"
-                    var shapes = font.generateShapes(message4, 20)
-                    text4 = new THREE.Mesh(geometry, matDark)
+                    var shapes4 = font.generateShapes(message4, 20)
+                    var geometry4 = new THREE.ShapeBufferGeometry(shapes4)
+                    geometry4.computeBoundingBox()
+                    xMid = -0.514 * (geometry4.boundingBox.max.x - geometry4.boundingBox.min.x)
+                    geometry4.translate(xMid, 0, 0)
+                    text4 = new THREE.Mesh(geometry4, matDark)
                     scene.add(text4)
                     text4.position.set(0, -20, 0)
                     text4.visible = false
@@ -123,8 +135,12 @@
                     })
 
                     var message5 = "Both goddess and cyborg"
-                    var shapes = font.generateShapes(message5, 20)
-                    text5 = new THREE.Mesh(geometry, matDark)
+                    var shapes5 = font.generateShapes(message5, 20)
+                    var geometry5 = new THREE.ShapeBufferGeometry(shapes5)
+                    geometry5.computeBoundingBox()
+                    xMid = -0.514 * (geometry5.boundingBox.max.x - geometry5.boundingBox.min.x)
+                    geometry5.translate(xMid, 0, 0)
+                    text5 = new THREE.Mesh(geometry5, matDark)
                     scene.add(text5)
                     text5.position.set(0, -60, 0)
                     text5.visible = false
@@ -133,8 +149,12 @@
                     })
 
                     var message6 = "We heal ourselves"
-                    var shapes = font.generateShapes(message6, 20)
-                    text6 = new THREE.Mesh(geometry, matDark)
+                    var shapes6 = font.generateShapes(message6, 20)
+                    var geometry6 = new THREE.ShapeBufferGeometry(shapes6)
+                    geometry6.computeBoundingBox()
+                    xMid = -0.514 * (geometry6.boundingBox.max.x - geometry6.boundingBox.min.x)
+                    geometry6.translate(xMid, 0, 0)
+                    text6 = new THREE.Mesh(geometry6, matDark)
                     scene.add(text6)
                     text6.position.set(0, -100, 0)
                     text6.visible = false
@@ -143,8 +163,12 @@
                     })
 
                     var message7 = "Reach back to the soil, resist domination"
-                    var shapes = font.generateShapes(message7, 20)
-                    text7 = new THREE.Mesh(geometry, matDark)
+                    var shapes7 = font.generateShapes(message7, 20)
+                    var geometry7 = new THREE.ShapeBufferGeometry(shapes7)
+                    geometry7.computeBoundingBox()
+                    xMid = -0.514 * (geometry7.boundingBox.max.x - geometry7.boundingBox.min.x)
+                    geometry7.translate(xMid, 0, 0)
+                    text7 = new THREE.Mesh(geometry7, matDark)
                     scene.add(text7)
                     text7.position.set(0, -100, 0)
                     text7.visible = false
@@ -153,8 +177,12 @@
                     })
 
                     var message8 = "We won’t be sanitised nor silenced."
-                    var shapes = font.generateShapes(message8, 20)
-                    text8 = new THREE.Mesh(geometry, matDark)
+                    var shapes8 = font.generateShapes(message8, 20)
+                    var geometry8 = new THREE.ShapeBufferGeometry(shapes8)
+                    geometry8.computeBoundingBox()
+                    xMid = -0.514 * (geometry8.boundingBox.max.x - geometry8.boundingBox.min.x)
+                    geometry8.translate(xMid, 0, 0)
+                    text8 = new THREE.Mesh(geometry8, matDark)
                     scene.add(text8)
                     text8.position.set(0, -100, 0)
                     text8.visible = false
