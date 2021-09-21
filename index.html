@@ -68,7 +68,7 @@
 
                 var loader = new THREE.FontLoader()
                 loader.load("/assets/fonts/Accedent_Regular.json", function(font) {
-                    var xMid, text
+                    var xMid, text, text2
 
                     var color = 0x000000
                     var matDark = new THREE.LineBasicMaterial({
@@ -85,7 +85,6 @@
                     text = new THREE.Mesh(geometry, matDark)
                     scene.add(text)
                     text.position.set(0, -10, 0)
-
                     text.visible = false
                     document.getElementById("funghi-table").addEventListener("click", function() {
                         text.visible = !text.visible
@@ -100,7 +99,6 @@
                     text2 = new THREE.Mesh(geometry2, matDark)
                     scene.add(text2)
                     text2.position.set(0, 10, 0)
-
                     text2.visible = false
                     document.getElementById("heart-table").addEventListener("click", function() {
                         text2.visible = !text2.visible
