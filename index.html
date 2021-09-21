@@ -61,13 +61,13 @@
                 camera.position.set(0, 0, 1000)
 
                 scene = new THREE.Scene()
-                var renderer = new THREE.WebGLRenderer({ alpha: true })
                 // scene.background = new THREE.Color(0xe7ecf2)
-                renderer.setClearColor(0x000000, 0) // the default
 
-                renderer = new THREE.WebGLRenderer({ antialias: true })
+                // renderer = new THREE.WebGLRenderer({ antialias: true })
+                renderer = new THREE.WebGLRenderer({ alpha: true })
                 renderer.setPixelRatio(2)
                 renderer.setSize(window.innerWidth, window.innerHeight)
+                renderer.setClearColor(0x000000, 0)
 
                 container1.appendChild(renderer.domElement)
 
