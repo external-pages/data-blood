@@ -85,7 +85,7 @@
 
                     text1 = new THREE.Mesh(geometry1, matDark)
                     scene.add(text1)
-                    text1.position.set(0, 120, 0)
+                    text1.position.set(0, 140, 0)
                     text1.visible = false
                     document.getElementById("funghi-table").addEventListener("click", function() {
                         text1.visible = !text1.visible
@@ -99,7 +99,7 @@
                     geometry2.translate(xMid, 0, 0)
                     text2 = new THREE.Mesh(geometry2, matDark)
                     scene.add(text2)
-                    text2.position.set(0, 80, 0)
+                    text2.position.set(0, 100, 0)
                     text2.visible = false
                     document.getElementById("heart-table").addEventListener("click", function() {
                         text2.visible = !text2.visible
@@ -113,7 +113,7 @@
                     geometry3.translate(xMid, 0, 0)
                     text3 = new THREE.Mesh(geometry3, matDark)
                     scene.add(text3)
-                    text3.position.set(0, 40, 0)
+                    text3.position.set(0, 60, 0)
                     text3.visible = false
                     document.getElementById("flower-table").addEventListener("click", function() {
                         text3.visible = !text3.visible
@@ -127,7 +127,7 @@
                     geometry4.translate(xMid, 0, 0)
                     text4 = new THREE.Mesh(geometry4, matDark)
                     scene.add(text4)
-                    text4.position.set(0, 0, 0)
+                    text4.position.set(0, 20, 0)
                     text4.visible = false
                     document.getElementById("ipad-table").addEventListener("click", function() {
                         text4.visible = !text4.visible
@@ -141,7 +141,7 @@
                     geometry5.translate(xMid, 0, 0)
                     text5 = new THREE.Mesh(geometry5, matDark)
                     scene.add(text5)
-                    text5.position.set(0, -40, 0)
+                    text5.position.set(0, -20, 0)
                     text5.visible = false
                     document.getElementById("tv").addEventListener("click", function() {
                         text5.visible = !text5.visible
@@ -155,7 +155,7 @@
                     geometry6.translate(xMid, 0, 0)
                     text6 = new THREE.Mesh(geometry6, matDark)
                     scene.add(text6)
-                    text6.position.set(0, -80, 0)
+                    text6.position.set(0, -60, 0)
                     text6.visible = false
                     document.getElementById("arch-right").addEventListener("click", function() {
                         text6.visible = !text6.visible
@@ -169,7 +169,7 @@
                     geometry7.translate(xMid, 0, 0)
                     text7 = new THREE.Mesh(geometry7, matDark)
                     scene.add(text7)
-                    text7.position.set(0, -120, 0)
+                    text7.position.set(0, -100, 0)
                     text7.visible = false
                     document.getElementById("arch-left").addEventListener("click", function() {
                         text7.visible = !text7.visible
@@ -183,7 +183,7 @@
                     geometry8.translate(xMid, 0, 0)
                     text8 = new THREE.Mesh(geometry8, matDark)
                     scene.add(text8)
-                    text8.position.set(0, -160, 0)
+                    text8.position.set(0, -140, 0)
                     text8.visible = false
                     document.getElementById("plant-table").addEventListener("click", function() {
                         text8.visible = !text8.visible
@@ -194,7 +194,7 @@
                 // controls.rotateSpeed = 4
                 controls = new THREE.OrbitControls(camera, renderer.domElement)
                 controls.autoRotate = true
-                controls.autoRotateSpeed = -2
+                controls.autoRotateSpeed = -0.2
 
                 window.addEventListener("resize", onWindowResize, false)
             } // end init
