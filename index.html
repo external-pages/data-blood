@@ -40,6 +40,7 @@
 
         <script src="js/lib/threejs/build/three.js"></script>
         <script src="js/lib/threejs/TrackballControls.js"></script>
+        <script src="js/lib/threejs/OrbitControls.js"></script>
         <script>
             var camera, scene, renderer
 
@@ -60,7 +61,7 @@
                 camera.position.set(0, 0, 1000)
 
                 scene = new THREE.Scene()
-                scene.background = new THREE.Color(0xe7ecf2)
+                // scene.background = new THREE.Color(0xe7ecf2)
 
                 renderer = new THREE.WebGLRenderer({ antialias: true })
                 renderer.setPixelRatio(2)
@@ -92,8 +93,37 @@
                     text.position.set(0, -10, 0)
                 }) //end load function
 
-                controls = new THREE.TrackballControls(camera, renderer.domElement)
-                controls.rotateSpeed = 4
+                container1.appendChild(renderer.domElement)
+
+                var loader = new THREE.FontLoader()
+                loader.load("https://s3.amazonaws.com/external-pages/three.js-master/examples/fonts/Spectral_Regular.json", function(font) {
+                    var xMid, text
+
+                    var color = 0x000000
+                    var matDark = new THREE.LineBasicMaterial({
+                        color: color,
+                        side: THREE.DoubleSide
+                    })
+
+                    var message = "One foot in cyberspace"
+                    var shapes = font.generateShapes(message, 20)
+                    var geometry = new THREE.ShapeBufferGeometry(shapes)
+                    geometry.computeBoundingBox()
+                    xMid = -0.514 * (geometry.boundingBox.max.x - geometry.boundingBox.min.x)
+                    geometry.translate(xMid, 0, 0)
+
+                    // make shape ( N.B. edge view not visible )
+
+                    text = new THREE.Mesh(geometry, matDark)
+                    scene.add(text)
+                    text.position.set(0, -10, 0)
+                }) //end load function
+
+                // controls = new THREE.TrackballControls(camera, renderer.domElement)
+                // controls.rotateSpeed = 4
+                controls = new THREE.OrbitControls(camera, renderer.domElement)
+                controls.autoRotate = true
+                controls.autoRotateSpeed = -2
 
                 window.addEventListener("resize", onWindowResize, false)
             } // end init
