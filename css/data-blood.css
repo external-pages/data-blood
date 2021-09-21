@@ -140,8 +140,8 @@ p {
     margin-right: -50%;
     transform: translate(-50%, -50%);
     position: absolute;
-    /* top: 0px;
-    left: 0px; */
+    top: 0px;
+    left: 0px;
     width: 50vw;
     height: 80vh;
     /* background-color: red; */
