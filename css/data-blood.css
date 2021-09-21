@@ -2,7 +2,6 @@ body {
     background: transparent;
     margin-top: 0px;
     margin-left: 0px;
-<<<<<<< HEAD
     background-color: #574f4e;
 }
 
@@ -12,8 +11,6 @@ img.glow {
     width: 100vw;
     height: 50%;
     overflow-y: hidden;
-=======
->>>>>>> 1af12167824cca3e9d452caaabddf04b29a6243d
 }
 
 .background img {
@@ -27,11 +24,7 @@ img.glow {
 
 img.funghi-table,
 img.heart-table,
-<<<<<<< HEAD
 video.tv,
-=======
-img.tv,
->>>>>>> 1af12167824cca3e9d452caaabddf04b29a6243d
 img.ipad-table,
 img.arch-right,
 img.flower-table,
@@ -41,7 +34,6 @@ img.plant-table {
 }
 
 .funghi-table {
-<<<<<<< HEAD
     right: 15vw;
     top: 42vh;
     width: 30%;
@@ -56,7 +48,8 @@ img.plant-table {
 video.tv {
     top: 16vh;
     left: 19vw;
-    width: 12vw;
+    width: 12vw !important;
+    height: auto !important;
 }
 
 /* .tv, */
@@ -69,47 +62,18 @@ video.tv {
 .ipad-table {
     top: 55vh;
     left: 30vw;
-=======
-    right: 20vw;
-    top: 40vh;
-    width: 30%;
-}
-
-.heart-table {
-    left: 20vw;
-    top: 40vh;
-    width: 35%;
-}
-
-.tv {
-    top: 0;
-    left: 18vh;
-    width: 25%;
-}
-
-.ipad-table {
-    top: 38vh;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, 0);
->>>>>>> 1af12167824cca3e9d452caaabddf04b29a6243d
     width: 7%;
 }
 
 .arch-right {
     right: 2vw;
-<<<<<<< HEAD
     top: 60vh;
-=======
-    top: 50vh;
->>>>>>> 1af12167824cca3e9d452caaabddf04b29a6243d
     width: 15%;
 }
 
 .flower-table {
     left: 2vw;
     top: 25vh;
-<<<<<<< HEAD
     width: 33%;
 }
 
@@ -122,22 +86,6 @@ video.tv {
 .plant-table {
     top: 60vh;
     left: 40vw;
-=======
-    width: 30%;
-}
-
-.arch-left {
-    left: 12vw;
-    top: 55vh;
-    width: 30%;
-}
-
-.plant-table {
-    top: 30vw;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, 0);
->>>>>>> 1af12167824cca3e9d452caaabddf04b29a6243d
     width: 40%;
 }
 
