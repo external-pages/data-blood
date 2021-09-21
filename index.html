@@ -15,7 +15,7 @@
                 <img class="heart-table" id="heart-table" src="assets/cropped/8hearttableandtv0001.png" />
                 <img class="flower-table" id="flower-table" src="assets/cropped/7flowertable0001.png" />
                 <img class="ipad-table" id="ipad-table" src="assets/cropped/9ipadtable0001.png" />
-                <div id="id"> <video class="tv" src="assets/Datablood-RoomVid.mp4" autoplay loop controls></video></div>
+                <!-- <div id="id"><video class="tv" src="assets/Datablood-RoomVid.mp4" autoplay loop controls></video></div> -->
                 <img class="arch-right" id="arch-right" src="assets/cropped/4archright0001.png" />
                 <img class="arch-left" id="arch-left" src="assets/cropped/6archleft0001.png" />
                 <img class="plant-table" id="plant-table" src="assets/cropped/5planttable0001.png" />
@@ -133,19 +133,19 @@
                         text4.visible = !text4.visible
                     })
 
-                    var message5 = "Both goddess and cyborg"
-                    var shapes5 = font.generateShapes(message5, 20)
-                    var geometry5 = new THREE.ShapeBufferGeometry(shapes5)
-                    geometry5.computeBoundingBox()
-                    xMid = -0.514 * (geometry5.boundingBox.max.x - geometry5.boundingBox.min.x)
-                    geometry5.translate(xMid, 0, 0)
-                    text5 = new THREE.Mesh(geometry5, matDark)
-                    scene.add(text5)
-                    text5.position.set(0, -20, 0)
-                    text5.visible = false
-                    document.getElementById("tv").addEventListener("click", function() {
-                        text5.visible = !text5.visible
-                    })
+                    // var message5 = "Both goddess and cyborg"
+                    // var shapes5 = font.generateShapes(message5, 20)
+                    // var geometry5 = new THREE.ShapeBufferGeometry(shapes5)
+                    // geometry5.computeBoundingBox()
+                    // xMid = -0.514 * (geometry5.boundingBox.max.x - geometry5.boundingBox.min.x)
+                    // geometry5.translate(xMid, 0, 0)
+                    // text5 = new THREE.Mesh(geometry5, matDark)
+                    // scene.add(text5)
+                    // text5.position.set(0, -20, 0)
+                    // text5.visible = false
+                    // document.getElementById("tv").addEventListener("click", function() {
+                    //     text5.visible = !text5.visible
+                    // })
 
                     var message6 = "We heal ourselves"
                     var shapes6 = font.generateShapes(message6, 20)
