@@ -149,4 +149,5 @@ p {
     height: 100vh;
     /* background-color: red; */
     z-index: 3;
+    pointer-events: none;
 }
