@@ -22,12 +22,14 @@
             </div>
         </div>
         <div class="manifesto">
-            <div id="container1"></div>
-            <!-- The data in our blood is calling -->
-            <div id="container2"></div>
-            <!-- One foot in cyberspace -->
-            <div id="container3"></div>
-            <!-- One foot in the wild -->
+            <div id="container">
+                <!-- </div> -->
+                <!-- The data in our blood is calling -->
+                <!-- <div id="container2"></div> -->
+                <!-- One foot in cyberspace -->
+                <!-- <div id="container3"></div> -->
+                <!-- One foot in the wild -->
+            </div>
             <p class="manifesto4">We prioritise the primal</p>
             <p class="manifesto5">Recognise the sacred</p>
             <p class="manifesto6">Both goddess and cyborg</p>
@@ -51,7 +53,7 @@
             animate()
 
             function init() {
-                var container = document.getElementById("container1")
+                var container = document.getElementById("container")
 
                 camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000)
                 camera.position.set(0, 0, 1000)
