@@ -121,6 +121,7 @@ p {
 .manifesto7,
 .manifesto8 {
     display: none;
+    pointer-events: none;
 }
 
 .manifesto {
@@ -130,11 +131,11 @@ p {
     margin-right: -50%;
     transform: translate(-50%, -50%);
     z-index: 5;
-    pointer-events: none;
 }
 
 #container1,
-#container2 {
+#container2,
+#container3 {
     display: none;
     top: 50%;
     left: 50%;
