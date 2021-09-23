@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "accedent";
+    src: url("assets/fonts/Accedent_v1.ttf") format("truetype");
+}
 body {
     background: transparent;
     margin-top: 0px;
@@ -51,6 +55,27 @@ video.tv {
     margin: 0.5vw;
     width: 12vw !important;
     height: auto !important;
+}
+
+video.big-tv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw !important;
+    height: auto !important;
+}
+
+.enter a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-family: "accedent";
+    font-size: 3em;
+    z-index: 2;
+    text-decoration: none;
+    color: black;
 }
 
 /* .tv, */
