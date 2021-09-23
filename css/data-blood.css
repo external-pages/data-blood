@@ -46,8 +46,9 @@ img.plant-table {
 } */
 
 video.tv {
-    top: 16vh;
-    left: 19vw;
+    top: 14vh;
+    left: 18.5vw;
+    margin: 0.5vw;
     width: 12vw !important;
     height: auto !important;
 }
@@ -124,30 +125,66 @@ p {
     pointer-events: none;
 } */
 
-.manifesto {
+/* .manifesto {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    z-index: 5;
-}
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+} */
 
-#container,
-#container1,
-#container2,
-#container3 {
+#container {
     /* display: none; */
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: left;
+    position: fixed;
+    /* top: 0px;
+    left: 0px; */
     width: 100vw;
     height: 100vh;
     /* background-color: red; */
-    z-index: 3;
+    z-index: 6;
     pointer-events: none;
+    /* border: 1px solid rgba(210, 16, 22, 1);
+    box-shadow: 0 0 40px rgba(210, 16, 22, 0.5), inset 0 0 40px rgba(210, 16, 22, 0.5); */
+}
+
+.color {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.4;
+    z-index: 2;
+}
+
+.purple {
+    background: linear-gradient(to right, purple, 10%, transparent);
+}
+
+.red {
+    background: linear-gradient(to left, red, 10%, transparent);
+}
+
+.blue {
+    background: linear-gradient(to top, blue, 10%, transparent);
+}
+
+.green {
+    background: linear-gradient(to bottom, darkgreen, 10%, transparent);
+}
+
+.grey {
+    background: linear-gradient(to right, black, 10%, transparent);
+}
+
+.orange {
+    background: linear-gradient(to left, darkorange, 10%, transparent);
+}
+
+.darkblue {
+    background: linear-gradient(to top, darkblue, 10%, transparent);
 }

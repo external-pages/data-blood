@@ -27,34 +27,42 @@
             <img class="glow" src="assets/rose.png" />
             <div class="background"><img class="wall" src="assets/10wallsfullnoreflexsorry0001.png"/></div>
             <div class="layers">
-                <img class="funghi-table" id="funghi-table" src="assets/cropped/3fungitable0001.png" />
-                <img class="heart-table" id="heart-table" src="assets/cropped/8hearttableandtv0001.png" />
-                <img class="flower-table" id="flower-table" src="assets/cropped/7flowertable0001.png" />
-                <img class="ipad-table" id="ipad-table" src="assets/cropped/9ipadtable0001.png" />
-                <div id="id"><video class="tv" src="assets/Datablood-RoomVid.mp4" autoplay loop controls></video></div>
-                <img class="arch-right" id="arch-right" src="assets/cropped/4archright0001.png" />
-                <img class="arch-left" id="arch-left" src="assets/cropped/6archleft0001.png" />
-                <img class="plant-table" id="plant-table" src="assets/cropped/5planttable0001.png" />
+                <div class="light">
+                    <div class="green color"></div>
+                    <img class="funghi-table image" id="funghi-table" src="assets/cropped/3fungitable0001.png" />
+                </div>
+                <div class="light">
+                    <div class="red color"></div>
+                    <img class="heart-table image" id="heart-table" src="assets/cropped/8hearttableandtv0001.png" />
+                </div>
+                <div class="light">
+                    <div class="blue color"></div>
+                    <img class="flower-table image" id="flower-table" src="assets/cropped/7flowertable0001.png" />
+                </div>
+                <div class="light">
+                    <div class="purple color"></div>
+                    <img class="ipad-table image" id="ipad-table" src="assets/cropped/9ipadtable0001.png" />
+                </div>
+                <div class="light">
+                    <div id="tv"><video class="tv" id="tv-video" src="assets/Datablood-RoomVid.mp4" autoplay loop muted></video></div>
+                </div>
+                <div class="light">
+                    <div class="grey color"></div>
+                    <img class="arch-right image" id="arch-right" src="assets/cropped/4archright0001.png" />
+                </div>
+                <div class="light">
+                    <div class="orange color"></div>
+                    <img class="arch-left image" id="arch-left" src="assets/cropped/6archleft0001.png" />
+                </div>
+                <div class="light">
+                    <div class="darkblue color"></div>
+                    <img class="plant-table image" id="plant-table" src="assets/cropped/5planttable0001.png" />
+                </div>
             </div>
         </div>
-        <div class="manifesto">
-            <div id="container">
-                <!-- </div> -->
-                <!-- The data in our blood is calling -->
-                <!-- <div id="container2"></div> -->
-                <!-- One foot in cyberspace -->
-                <!-- <div id="container3"></div> -->
-                <!-- One foot in the wild -->
-                <!-- <p class="manifesto4">We prioritise the primal</p>
-            <p class="manifesto5">Recognise the sacred</p>
-            <p class="manifesto6">Both goddess and cyborg</p>
-            <p class="manifesto7">We heal ourselves</p>
-            <p class="manifesto8"
-                >Reach back to the soil, resist domination<br />
-                We won’t be sanitised nor silenced.</p
-            > -->
-            </div></div
-        >
+        <!-- <div class="manifesto">  -->
+        <div id="container"> </div>
+        <!-- </div> -->
 
         <script src="js/lib/jquery-3.4.1.min.js"></script>
         <script src="js/data-blood.js"></script>
@@ -84,7 +92,7 @@
 
                 var loader = new THREE.FontLoader()
                 loader.load("/assets/fonts/Accedent_Regular.json", function(font) {
-                    var xMid, text, text2
+                    var xMid, text, text3, text4, text5, text6, text7, text8
 
                     var color = 0x000000
                     var matDark = new THREE.LineBasicMaterial({
@@ -93,7 +101,7 @@
                     })
 
                     var message1 = "The data in our blood is calling"
-                    var shapes1 = font.generateShapes(message1, 20)
+                    var shapes1 = font.generateShapes(message1, 30)
                     var geometry1 = new THREE.ShapeBufferGeometry(shapes1)
                     geometry1.computeBoundingBox()
                     xMid = -0.514 * (geometry1.boundingBox.max.x - geometry1.boundingBox.min.x)
@@ -108,7 +116,7 @@
                     })
 
                     var message2 = "One foot in cyberspace"
-                    var shapes2 = font.generateShapes(message2, 20)
+                    var shapes2 = font.generateShapes(message2, 30)
                     var geometry2 = new THREE.ShapeBufferGeometry(shapes2)
                     geometry2.computeBoundingBox()
                     xMid = -0.514 * (geometry2.boundingBox.max.x - geometry2.boundingBox.min.x)
@@ -122,7 +130,7 @@
                     })
 
                     var message3 = "We prioritise the primal"
-                    var shapes3 = font.generateShapes(message3, 20)
+                    var shapes3 = font.generateShapes(message3, 30)
                     var geometry3 = new THREE.ShapeBufferGeometry(shapes3)
                     geometry3.computeBoundingBox()
                     xMid = -0.514 * (geometry3.boundingBox.max.x - geometry3.boundingBox.min.x)
@@ -136,7 +144,7 @@
                     })
 
                     var message4 = "Recognise the sacred"
-                    var shapes4 = font.generateShapes(message4, 20)
+                    var shapes4 = font.generateShapes(message4, 30)
                     var geometry4 = new THREE.ShapeBufferGeometry(shapes4)
                     geometry4.computeBoundingBox()
                     xMid = -0.514 * (geometry4.boundingBox.max.x - geometry4.boundingBox.min.x)
@@ -150,7 +158,7 @@
                     })
 
                     var message5 = "Both goddess and cyborg"
-                    var shapes5 = font.generateShapes(message5, 20)
+                    var shapes5 = font.generateShapes(message5, 30)
                     var geometry5 = new THREE.ShapeBufferGeometry(shapes5)
                     geometry5.computeBoundingBox()
                     xMid = -0.514 * (geometry5.boundingBox.max.x - geometry5.boundingBox.min.x)
@@ -164,7 +172,7 @@
                     })
 
                     var message6 = "We heal ourselves"
-                    var shapes6 = font.generateShapes(message6, 20)
+                    var shapes6 = font.generateShapes(message6, 30)
                     var geometry6 = new THREE.ShapeBufferGeometry(shapes6)
                     geometry6.computeBoundingBox()
                     xMid = -0.514 * (geometry6.boundingBox.max.x - geometry6.boundingBox.min.x)
@@ -177,8 +185,8 @@
                         text6.visible = !text6.visible
                     })
 
-                    var message7 = "Reach back to the soil, resist domination"
-                    var shapes7 = font.generateShapes(message7, 20)
+                    var message7 = "Reach back to the soil"
+                    var shapes7 = font.generateShapes(message7, 30)
                     var geometry7 = new THREE.ShapeBufferGeometry(shapes7)
                     geometry7.computeBoundingBox()
                     xMid = -0.514 * (geometry7.boundingBox.max.x - geometry7.boundingBox.min.x)
@@ -191,8 +199,8 @@
                         text7.visible = !text7.visible
                     })
 
-                    var message8 = "We won’t be sanitised nor silenced."
-                    var shapes8 = font.generateShapes(message8, 20)
+                    var message8 = "We won’t be sanitised"
+                    var shapes8 = font.generateShapes(message8, 30)
                     var geometry8 = new THREE.ShapeBufferGeometry(shapes8)
                     geometry8.computeBoundingBox()
                     xMid = -0.514 * (geometry8.boundingBox.max.x - geometry8.boundingBox.min.x)
