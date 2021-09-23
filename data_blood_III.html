@@ -23,6 +23,11 @@
         <link rel="stylesheet" href="css/data-blood.css" />
     </head>
     <body>
+        <!-- <iframe src="https://s3.amazonaws.com/external-pages/data-blood/datablood.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> -->
+        <audio autoplay loop id="playAudio">
+            <source src="https://s3.amazonaws.com/external-pages/data-blood/datablood.mp3" />
+        </audio>
+
         <div class="scene">
             <img class="glow" src="assets/rose.png" />
             <div class="background"><img class="wall" src="assets/10wallsfullnoreflexsorry0001.png"/></div>
@@ -80,6 +85,12 @@
         <script src="js/lib/threejs/TrackballControls.js"></script>
         <script src="js/lib/threejs/OrbitControls.js"></script>
         <script>
+            document.addEventListener("click", musicPlay)
+            function musicPlay() {
+                document.getElementById("playAudio").play()
+                document.removeEventListener("click", musicPlay)
+            }
+
             var camera, scene, renderer
 
             init()
