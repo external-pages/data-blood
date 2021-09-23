@@ -195,9 +195,6 @@
                     scene.add(text7)
                     text7.position.set(0, -100, 0)
                     text7.visible = false
-                    document.getElementById("arch-left").addEventListener("click", function() {
-                        text7.visible = !text7.visible
-                    })
                     var message8 = "resist domination"
                     var shapes8 = font.generateShapes(message8, 30)
                     var geometry8 = new THREE.ShapeBufferGeometry(shapes8)
@@ -209,7 +206,7 @@
                     text8.position.set(0, -140, 0)
                     text8.visible = false
                     document.getElementById("arch-left").addEventListener("click", function() {
-                        text8.visible = !text8.visible
+                        ;(text7.visible = !text7.visible), (text8.visible = !text8.visible)
                     })
 
                     var message9 = "We won’t be sanitised"
@@ -218,13 +215,10 @@
                     geometry9.computeBoundingBox()
                     xMid = -0.514 * (geometry9.boundingBox.max.x - geometry9.boundingBox.min.x)
                     geometry9.translate(xMid, 0, 0)
-                    text9 = new THREE.Mesh(geometry8, matDark)
+                    text9 = new THREE.Mesh(geometry9, matDark)
                     scene.add(text9)
                     text9.position.set(0, -180, 0)
                     text9.visible = false
-                    document.getElementById("plant-table").addEventListener("click", function() {
-                        text9.visible = !text9.visible
-                    })
                     var message10 = "nor silenced."
                     var shapes10 = font.generateShapes(message10, 30)
                     var geometry10 = new THREE.ShapeBufferGeometry(shapes10)
@@ -236,7 +230,7 @@
                     text10.position.set(0, -220, 0)
                     text10.visible = false
                     document.getElementById("plant-table").addEventListener("click", function() {
-                        text10.visible = !text10.visible
+                        ;(text9.visible = !text9.visible), (text10.visible = !text10.visible)
                     })
                 }) //end load function
 
