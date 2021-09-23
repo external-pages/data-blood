@@ -23,6 +23,7 @@
         <link rel="stylesheet" href="css/data-blood.css" />
     </head>
     <body>
+        <div class="notice"><p>Please view on desktop browsers.</p></div>
         <!-- <iframe src="https://s3.amazonaws.com/external-pages/data-blood/datablood.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> -->
         <audio autoplay loop id="playAudio">
             <source src="https://s3.amazonaws.com/external-pages/data-blood/datablood.mp3" />
@@ -30,7 +31,7 @@
 
         <div class="scene">
             <img class="glow" src="assets/rose.png" />
-            <div class="background"><img class="wall" src="assets/10wallsfullnoreflexsorry0001.png"/></div>
+            <div class="background" id="background"><img class="wall" src="assets/10wallsfullnoreflexsorry0001.png"/></div>
             <div class="layers">
                 <div class="light">
                     <div class="green color"></div>
@@ -71,7 +72,7 @@
                 <div class="light">
                     <div class="darkblue color"></div>
                     <img class="plant-table image" id="plant-table" src="assets/cropped/gif/99animplantAB0001.png" />
-                    <img class="plant-on-table image" id="plant-table" src="assets/cropped/gif/flowergif.gif" />
+                    <img class="plant-on-table image" id="plant-on-table" src="assets/cropped/gif/flowergif.gif" />
                 </div>
             </div>
         </div>
@@ -113,7 +114,7 @@
 
                 var loader = new THREE.FontLoader()
                 loader.load("/assets/fonts/Accedent_Regular.json", function(font) {
-                    var xMid, text, text3, text4, text5, text6, text7, text8
+                    var xMid, text, text3, text4, text5, text6, text7, text8, text9, text10
 
                     var color = 0x000000
                     var matDark = new THREE.LineBasicMaterial({
@@ -121,22 +122,25 @@
                         side: THREE.DoubleSide
                     })
 
-                    var message1 = "The data in our blood is calling"
+                    var message1 = `The data in our blood is calling
+
+One foot in cyberspace
+One foot in the wild`
                     var shapes1 = font.generateShapes(message1, 30)
                     var geometry1 = new THREE.ShapeBufferGeometry(shapes1)
                     geometry1.computeBoundingBox()
                     xMid = -0.514 * (geometry1.boundingBox.max.x - geometry1.boundingBox.min.x)
                     geometry1.translate(xMid, 0, 0)
-
                     text1 = new THREE.Mesh(geometry1, matDark)
                     scene.add(text1)
-                    text1.position.set(0, 140, 0)
+                    text1.position.set(0, 260, 0)
                     text1.visible = false
                     document.getElementById("funghi-table").addEventListener("click", function() {
                         text1.visible = !text1.visible
                     })
 
-                    var message2 = "One foot in cyberspace"
+                    var message2 = `We prioritise the primal
+Recognise the sacred`
                     var shapes2 = font.generateShapes(message2, 30)
                     var geometry2 = new THREE.ShapeBufferGeometry(shapes2)
                     geometry2.computeBoundingBox()
@@ -144,13 +148,17 @@
                     geometry2.translate(xMid, 0, 0)
                     text2 = new THREE.Mesh(geometry2, matDark)
                     scene.add(text2)
-                    text2.position.set(0, 100, 0)
+                    text2.position.set(0, 80, 0)
                     text2.visible = false
                     document.getElementById("heart-table").addEventListener("click", function() {
                         text2.visible = !text2.visible
                     })
 
-                    var message3 = "We prioritise the primal"
+                    var message3 = `Both goddess and cyborg
+We heal ourselves
+
+Reach back to the soil
+resist domination`
                     var shapes3 = font.generateShapes(message3, 30)
                     var geometry3 = new THREE.ShapeBufferGeometry(shapes3)
                     geometry3.computeBoundingBox()
@@ -158,13 +166,14 @@
                     geometry3.translate(xMid, 0, 0)
                     text3 = new THREE.Mesh(geometry3, matDark)
                     scene.add(text3)
-                    text3.position.set(0, 60, 0)
+                    text3.position.set(0, -40, 0)
                     text3.visible = false
-                    document.getElementById("flower-table").addEventListener("click", function() {
+                    document.getElementById("ipad-table").addEventListener("click", function() {
                         text3.visible = !text3.visible
                     })
 
-                    var message4 = "Recognise the sacred"
+                    var message4 = `We will not be sanitised
+nor silenced`
                     var shapes4 = font.generateShapes(message4, 30)
                     var geometry4 = new THREE.ShapeBufferGeometry(shapes4)
                     geometry4.computeBoundingBox()
@@ -172,86 +181,10 @@
                     geometry4.translate(xMid, 0, 0)
                     text4 = new THREE.Mesh(geometry4, matDark)
                     scene.add(text4)
-                    text4.position.set(0, 20, 0)
+                    text4.position.set(0, -260, 0)
                     text4.visible = false
-                    document.getElementById("ipad-table").addEventListener("click", function() {
+                    document.getElementById("flower-table").addEventListener("click", function() {
                         text4.visible = !text4.visible
-                    })
-
-                    var message5 = "Both goddess and cyborg"
-                    var shapes5 = font.generateShapes(message5, 30)
-                    var geometry5 = new THREE.ShapeBufferGeometry(shapes5)
-                    geometry5.computeBoundingBox()
-                    xMid = -0.514 * (geometry5.boundingBox.max.x - geometry5.boundingBox.min.x)
-                    geometry5.translate(xMid, 0, 0)
-                    text5 = new THREE.Mesh(geometry5, matDark)
-                    scene.add(text5)
-                    text5.position.set(0, -20, 0)
-                    text5.visible = false
-                    document.getElementById("tv").addEventListener("click", function() {
-                        text5.visible = !text5.visible
-                    })
-
-                    var message6 = "We heal ourselves"
-                    var shapes6 = font.generateShapes(message6, 30)
-                    var geometry6 = new THREE.ShapeBufferGeometry(shapes6)
-                    geometry6.computeBoundingBox()
-                    xMid = -0.514 * (geometry6.boundingBox.max.x - geometry6.boundingBox.min.x)
-                    geometry6.translate(xMid, 0, 0)
-                    text6 = new THREE.Mesh(geometry6, matDark)
-                    scene.add(text6)
-                    text6.position.set(0, -60, 0)
-                    text6.visible = false
-                    document.getElementById("arch-right").addEventListener("click", function() {
-                        text6.visible = !text6.visible
-                    })
-
-                    var message7 = "Reach back to the soil,"
-                    var shapes7 = font.generateShapes(message7, 20)
-                    var geometry7 = new THREE.ShapeBufferGeometry(shapes7)
-                    geometry7.computeBoundingBox()
-                    xMid = -0.514 * (geometry7.boundingBox.max.x - geometry7.boundingBox.min.x)
-                    geometry7.translate(xMid, 0, 0)
-                    text7 = new THREE.Mesh(geometry7, matDark)
-                    scene.add(text7)
-                    text7.position.set(0, -100, 0)
-                    text7.visible = false
-                    var message8 = "resist domination"
-                    var shapes8 = font.generateShapes(message8, 20)
-                    var geometry8 = new THREE.ShapeBufferGeometry(shapes8)
-                    geometry8.computeBoundingBox()
-                    xMid = -0.514 * (geometry8.boundingBox.max.x - geometry8.boundingBox.min.x)
-                    geometry8.translate(xMid, 0, 0)
-                    text8 = new THREE.Mesh(geometry8, matDark)
-                    scene.add(text8)
-                    text8.position.set(0, -140, 0)
-                    text8.visible = false
-                    document.getElementById("arch-left").addEventListener("click", function() {
-                        ;(text7.visible = !text7.visible)((text8.visible = !text8.visible))
-                    })
-
-                    var message9 = "We won’t be sanitised"
-                    var shapes9 = font.generateShapes(message9, 20)
-                    var geometry9 = new THREE.ShapeBufferGeometry(shapes9)
-                    geometry9.computeBoundingBox()
-                    xMid = -0.514 * (geometry9.boundingBox.max.x - geometry9.boundingBox.min.x)
-                    geometry9.translate(xMid, 0, 0)
-                    text9 = new THREE.Mesh(geometry9, matDark)
-                    scene.add(text9)
-                    text9.position.set(0, -180, 0)
-                    text9.visible = false
-                    var message10 = "nor silenced."
-                    var shapes10 = font.generateShapes(message10, 20)
-                    var geometry10 = new THREE.ShapeBufferGeometry(shapes10)
-                    geometry10.computeBoundingBox()
-                    xMid = -0.514 * (geometry10.boundingBox.max.x - geometry10.boundingBox.min.x)
-                    geometry10.translate(xMid, 0, 0)
-                    text10 = new THREE.Mesh(geometry10, matDark)
-                    scene.add(text10)
-                    text10.position.set(0, -220, 0)
-                    text10.visible = false
-                    document.getElementById("plant-table").addEventListener("click", function() {
-                        ;(text9.visible = !text9.visible)((text10.visible = !text10.visible))
                     })
                 }) //end load function
 
@@ -259,7 +192,7 @@
                 // controls.rotateSpeed = 4
                 controls = new THREE.OrbitControls(camera, renderer.domElement)
                 controls.autoRotate = true
-                controls.autoRotateSpeed = 1
+                controls.autoRotateSpeed = 0.3
 
                 window.addEventListener("resize", onWindowResize, false)
             } // end init

@@ -226,3 +226,34 @@ p {
 .darkblue {
     background: linear-gradient(to top, darkblue, 10%, transparent);
 }
+
+.notice {
+    display: none;
+}
+
+@media only screen and (max-device-width: 829px) and (-webkit-min-device-pixel-ratio: 2) {
+    .notice {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: url("../assets/rose.png");
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+        z-index: 9999;
+    }
+
+    .notice p {
+        font-family: "accedent";
+        font-size: 2em;
+        text-decoration: none;
+        color: black;
+        position: absolute;
+        width: 50vw;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+}
