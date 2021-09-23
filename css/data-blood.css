@@ -110,10 +110,22 @@ video.big-tv {
     width: 28%;
 }
 
-.plant-table {
+/* .plant-table {
     top: 60vh;
     left: 40vw;
     width: 40%;
+} */
+
+.plant-table {
+    top: 85vh;
+    left: 45vw;
+    width: 40%;
+}
+
+.plant-on-table {
+    top: 63vh;
+    left: 70vw;
+    width: 15%;
 }
 
 .layers img:hover {
