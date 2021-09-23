@@ -185,11 +185,11 @@
                         text6.visible = !text6.visible
                     })
 
-                    var message7 = "Reach back to the soil"
+                    var message7 = "Reach back to the soil, resist domination"
                     var shapes7 = font.generateShapes(message7, 30)
                     var geometry7 = new THREE.ShapeBufferGeometry(shapes7)
                     geometry7.computeBoundingBox()
-                    xMid = -0.514 * (geometry7.boundingBox.max.x - geometry7.boundingBox.min.x)
+                    xMid = +0.514 * (geometry7.boundingBox.max.x - geometry7.boundingBox.min.x)
                     geometry7.translate(xMid, 0, 0)
                     text7 = new THREE.Mesh(geometry7, matDark)
                     scene.add(text7)
@@ -199,11 +199,11 @@
                         text7.visible = !text7.visible
                     })
 
-                    var message8 = "We won’t be sanitised"
+                    var message8 = "We won’t be sanitised nor silenced."
                     var shapes8 = font.generateShapes(message8, 30)
                     var geometry8 = new THREE.ShapeBufferGeometry(shapes8)
                     geometry8.computeBoundingBox()
-                    xMid = -0.514 * (geometry8.boundingBox.max.x - geometry8.boundingBox.min.x)
+                    xMid = +0.514 * (geometry8.boundingBox.max.x - geometry8.boundingBox.min.x)
                     geometry8.translate(xMid, 0, 0)
                     text8 = new THREE.Mesh(geometry8, matDark)
                     scene.add(text8)
