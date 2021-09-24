@@ -54,19 +54,59 @@ video.tv {
     left: 0;
     margin: 0;
     width: 18vw !important;
-    height: 17vh !important;
+    height: 22vh !important;
 }
 
 #tv {
     position: absolute;
-    top: 10vh;
+    top: 12vh;
     left: 13vw;
     margin: 0.5vw;
     width: 18vw;
-    height: 17vh;
+    height: 22vh;
     border: 1.5vw solid black;
     overflow: hidden;
     background-color: black;
+}
+
+@media screen and (max-device-width: 1231px) {
+    #tv {
+        top: 10vh;
+    }
+}
+
+@media screen and (max-device-width: 1054px) {
+    #tv {
+        top: 9vh;
+    }
+}
+
+@media screen and (max-device-width: 948px) {
+    #tv {
+        top: 8vh;
+    }
+}
+
+@media screen and (min-device-width: 1573px) {
+    #tv {
+        top: 14vh;
+    }
+}
+
+@media screen and (min-device-width: 1721px) {
+    #tv {
+        top: 16vh;
+    }
+}
+
+@media screen and (min-device-width: 1825px) {
+    #tv {
+        top: 18vh;
+        height: 26vh;
+    }
+    video.tv {
+        height: 26vh !important;
+    }
 }
 
 video.big-tv {
