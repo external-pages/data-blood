@@ -50,11 +50,23 @@ img.plant-table {
 } */
 
 video.tv {
-    top: 14vh;
-    left: 18.5vw;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 18vw !important;
+    height: 17vh !important;
+}
+
+#tv {
+    position: absolute;
+    top: 10vh;
+    left: 13vw;
     margin: 0.5vw;
-    width: 12vw !important;
-    height: auto !important;
+    width: 18vw;
+    height: 17vh;
+    border: 1.5vw solid black;
+    overflow: hidden;
+    background-color: black;
 }
 
 video.big-tv {
